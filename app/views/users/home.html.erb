@@ -7,10 +7,39 @@
 </head>
 <body>
 
-	<h2>Hi David! Here starts the adventure!</h2>
+	<div class="jumbotron">
+		<div class="container">
+		  <h1>Welcome to I Just Did!</h1>
+		  <p>Here you will discover how awesome are your neighbors!</p>
+		  <a class="btn btn-primary btn-lg" id="get-started" role="button">Get started</a>
+		 </div>
+	</div>
 
-	<p id='position'></p>
-	<div id="map" style="width:100%; height:100%"></div>
+
+	<div class="container-mio">
+	   <div class="row">
+	      <div class="col-lg-9">
+						<div class="tab-pane" id="mapurri">
+							<div id="map"></div>
+						</div>
+		  			<!--<img src="http://periodicoaspectos.com/wp-content/uploads/2015/11/ojby5fx5vgxsfhihqq1o.png" style="width:90%; height:85%">-->
+	      </div>
+        <div class="col-lg-3">
+        	<ul visibility: 'hidden' class="nav nav-pills nav-stacked">
+					  <li role="presentation" class="active"><a href="#">Categories</a></li>
+					  <li role="presentation"><a href="#">Distance</a></li>
+					  <li role="presentation"><a href="#">Messages</a></li>
+					</ul>
+        </div>
+    </div>
+	</div>
+
+	<script type="text/javascript">
+		$('#get-started').on("click",function () {
+			console.log('removing the intro box');
+			$('.jumbotron').hide(500);
+		});
+	</script>
 
 </body>
 </html>
