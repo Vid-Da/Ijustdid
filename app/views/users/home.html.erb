@@ -3,7 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="geolocation.css">
 </head>
 <body>
 
@@ -15,18 +14,44 @@
 		 </div>
 	</div>
 
-
 	<div class="container-mio">
 	   <div class="row">
 	      <div class="col-lg-9">
-						<div class="tab-pane" id="mapurri">
-							<div id="map"></div>
-						</div>
+					<div id="map"></div>
+					
 		  			<!--<img src="http://periodicoaspectos.com/wp-content/uploads/2015/11/ojby5fx5vgxsfhihqq1o.png" style="width:90%; height:85%">-->
 	      </div>
-        <div class="col-lg-3">
-        	<ul visibility: 'hidden' class="nav nav-pills nav-stacked">
-					  <li role="presentation" class="active"><a href="#">Categories</a></li>
+
+        <div class="col-lg-3 hidden">
+        	<ul display: 'none' class="nav nav-pills nav-stacked">
+        		<li><a class="btn btn-warning btn-lg" id="create-achievement" role="button">Do it !</a></li>
+					  <li role="presentation" class="active" id="categories"><a href="#">Categories</a></li>
+					  <li class='categories-menu hidden'>
+					  	<div class="checkbox">
+    						<label><input type="checkbox"> <p> Family </p> </label>
+      				</div>
+      				<div class="checkbox">	
+      					<label><input type="checkbox"> <p> Technology </p> </label>
+      				</div>
+      				<div class="checkbox">	
+      					<label><input type="checkbox"> <p> Business </p> </label>
+      				</div>
+      				<div class="checkbox">	
+      					<label><input type="checkbox"> <p> Art </p> </label>
+      				</div>
+      				<div class="checkbox">	
+      					<label><input type="checkbox"> <p> Entrepreneurship </p> </label>
+      				</div>
+      				<div class="checkbox">	
+      					<label><input type="checkbox"> <p> Studies </p> </label>
+      				</div>
+      				<div class="checkbox">	
+      					<label><input type="checkbox"> <p> Programming </p> </label>
+      				</div>
+      				<div class="checkbox">	
+      					<label><input type="checkbox"> <p> Sports </p> </label>
+    					</div>
+					  </li>
 					  <li role="presentation"><a href="#">Distance</a></li>
 					  <li role="presentation"><a href="#">Messages</a></li>
 					</ul>
@@ -35,10 +60,23 @@
 	</div>
 
 	<script type="text/javascript">
+
 		$('#get-started').on("click",function () {
 			console.log('removing the intro box');
 			$('.jumbotron').hide(500);
+			$('.col-lg-3').removeClass('hidden');
 		});
+
+		$('#categories').on("click",function () {
+			console.log('adding categories');
+			$('.categories-menu').toggleClass('hidden');
+		});
+
+		$('#create-achievement').on("click",function () {
+			console.log('creating achievement');
+			create_achievement();
+		});
+
 	</script>
 
 </body>

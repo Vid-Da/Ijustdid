@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   root to: 'users#home'
 
+  get '/api/achievements' => 'achievements#index'
+  get "/api/achievements/new" => "achievements#create"
+  get "/api/achievments/:id" => "achievements#show"
+
 =begin
                Prefix Verb   URI Pattern                    Controller#Action
         new_user_session GET    /users/sign_in(.:format)       devise/sessions#new
