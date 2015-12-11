@@ -1,12 +1,41 @@
 // Markers-----------------
 
+var icons = {
+  Family : {
+    icon: 'http://icons.iconarchive.com/icons/icons8/windows-8/512/Science-Test-Tube-icon.png'
+  },
+   Technology : {
+    icon: 'http://icons.iconarchive.com/icons/icons8/windows-8/512/Science-Test-Tube-icon.png'
+  },
+   Business : {
+    icon: 'http://icons.iconarchive.com/icons/icons8/windows-8/512/Science-Test-Tube-icon.png'
+  },
+   Art : {
+    icon: 'http://icons.iconarchive.com/icons/icons8/windows-8/512/Science-Test-Tube-icon.png'
+  },
+   Entrepreneurship : {
+    icon: 'http://icons.iconarchive.com/icons/icons8/windows-8/512/Science-Test-Tube-icon.png'
+  },
+   Studies : {
+    icon: 'http://icons.iconarchive.com/icons/icons8/windows-8/512/Science-Test-Tube-icon.png'
+  },
+   Coding : {
+    icon: 'http://icons.iconarchive.com/icons/icons8/windows-8/512/Science-Test-Tube-icon.png'
+  },
+   Sports : {
+    icon: 'http://icons.iconarchive.com/icons/icons8/windows-8/512/Science-Test-Tube-icon.png'
+  },
+};
+
 function createMarker (position) {
   var marker = new google.maps.Marker({
   	position: position,
   	map: map,
+    icon: 'http://icons.iconarchive.com/icons/icons8/windows-8/512/Science-Test-Tube-icon.png',
+    animation: google.maps.Animation.DROP,
     title: 'your position'
   });
-  marker.addListener('click', function() {
+  marker.addListener('mouseover', function() {
     InfoWindow.open(map, marker);
   });
 
@@ -24,6 +53,11 @@ function createMarker (position) {
   var InfoWindow = new google.maps.InfoWindow({
     content: contentString
   });
+
+  marker.addListener('mouseout', function() {
+    InfoWindow.close(map, marker);
+  });
+
 };
 
 function createAllMarkers (position) {
@@ -31,11 +65,13 @@ function createAllMarkers (position) {
 
   var marker = new google.maps.Marker({
     position: LatLng,
-    map: map
+    map: map,
+    icon: icons[position.category].icon,
+    animation: google.maps.Animation.DROP
   });
   console.log('creating extra marker');
 
-  marker.addListener('click', function() {
+  marker.addListener('mousemove', function() {
     InfoWindow.open(map, marker);
   });
 
@@ -57,5 +93,9 @@ function createAllMarkers (position) {
 
   achievements[position.category] = achievements[position.category] || [];
   achievements[position.category].push(marker)
+
+  marker.addListener('mouseout', function() {
+    InfoWindow.close(map, marker);
+  });
 
 };

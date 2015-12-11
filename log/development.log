@@ -35608,3 +35608,792 @@ Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.6ms)
   [1m[35mAchievement Load (0.4ms)[0m  SELECT "achievements".* FROM "achievements" WHERE "achievements"."user_id" = $1  [["user_id", 1]]
   [1m[36mAchievement Load (1.1ms)[0m  [1mSELECT  "achievements".* FROM "achievements"  ORDER BY "achievements"."id" ASC LIMIT 1[0m
   [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-11 18:28:52 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 1216ms (Views: 1139.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/achievements.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 18:28:54 +0100
+
+
+Started GET "/assets/geolocation.self-5eb62fa0e93f3f4b522ce78149aef075579a1fe079db1645fcc9d53fd64188d2.css?body=1" for 127.0.0.1 at 2015-12-11 18:28:54 +0100
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 18:28:54 +0100
+
+
+Started GET "/assets/application.self-4fd289fdbe56c59925832493317e43f3856bf01b7b4d9a8738c0ce27c7836e82.css?body=1" for 127.0.0.1 at 2015-12-11 18:28:54 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-11 18:28:54 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-11 18:28:54 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-11 18:28:54 +0100
+
+
+Started GET "/assets/achievements.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 18:28:54 +0100
+
+
+Started GET "/assets/buttons.self-1fbdd6163b54656562753addcf8acb28b112e2599bc1ed2ce9a63bf160c188e8.js?body=1" for 127.0.0.1 at 2015-12-11 18:28:54 +0100
+
+
+Started GET "/assets/geolocation.self-d48c4449112dab7084b153f5a931a2c1d4924876b71aca965a29622dff3e5621.js?body=1" for 127.0.0.1 at 2015-12-11 18:28:54 +0100
+
+
+Started GET "/assets/markers.self-513665077de81b5c450e7e3ca6f47bb0eaba4e7954e9bc674195bd865442b31b.js?body=1" for 127.0.0.1 at 2015-12-11 18:28:54 +0100
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 18:28:54 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-11 18:28:54 +0100
+
+
+Started GET "/api/achievements" for 127.0.0.1 at 2015-12-11 18:28:54 +0100
+
+SyntaxError (/home/cuquix/code/Ijustdid/app/controllers/achievements_controller.rb:19: syntax error, unexpected keyword_do_block
+/home/cuquix/code/Ijustdid/app/controllers/achievements_controller.rb:38: syntax error, unexpected keyword_end, expecting $end):
+  app/controllers/achievements_controller.rb:19: syntax error, unexpected keyword_do_block
+  app/controllers/achievements_controller.rb:38: syntax error, unexpected keyword_end, expecting $end
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.2ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (30.2ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (37.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (93.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-11 18:30:01 +0100
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 125ms (Views: 123.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/achievements.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 18:30:02 +0100
+
+
+Started GET "/assets/geolocation.self-5eb62fa0e93f3f4b522ce78149aef075579a1fe079db1645fcc9d53fd64188d2.css?body=1" for 127.0.0.1 at 2015-12-11 18:30:02 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-11 18:30:02 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-11 18:30:02 +0100
+
+
+Started GET "/assets/application.self-4fd289fdbe56c59925832493317e43f3856bf01b7b4d9a8738c0ce27c7836e82.css?body=1" for 127.0.0.1 at 2015-12-11 18:30:02 +0100
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 18:30:02 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-11 18:30:02 +0100
+
+
+Started GET "/assets/achievements.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 18:30:02 +0100
+
+
+Started GET "/assets/buttons.self-1fbdd6163b54656562753addcf8acb28b112e2599bc1ed2ce9a63bf160c188e8.js?body=1" for 127.0.0.1 at 2015-12-11 18:30:02 +0100
+
+
+Started GET "/assets/geolocation.self-d48c4449112dab7084b153f5a931a2c1d4924876b71aca965a29622dff3e5621.js?body=1" for 127.0.0.1 at 2015-12-11 18:30:02 +0100
+
+
+Started GET "/assets/markers.self-513665077de81b5c450e7e3ca6f47bb0eaba4e7954e9bc674195bd865442b31b.js?body=1" for 127.0.0.1 at 2015-12-11 18:30:02 +0100
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 18:30:02 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-11 18:30:02 +0100
+
+
+Started GET "/api/achievements" for 127.0.0.1 at 2015-12-11 18:30:02 +0100
+
+SyntaxError (/home/cuquix/code/Ijustdid/app/controllers/achievements_controller.rb:19: syntax error, unexpected keyword_do_block
+/home/cuquix/code/Ijustdid/app/controllers/achievements_controller.rb:38: syntax error, unexpected keyword_end, expecting $end):
+  app/controllers/achievements_controller.rb:19: syntax error, unexpected keyword_do_block
+  app/controllers/achievements_controller.rb:38: syntax error, unexpected keyword_end, expecting $end
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (2.3ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (33.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (95.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (121.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-11 18:30:45 +0100
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 236ms (Views: 234.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/achievements.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 18:30:45 +0100
+
+
+Started GET "/assets/geolocation.self-5eb62fa0e93f3f4b522ce78149aef075579a1fe079db1645fcc9d53fd64188d2.css?body=1" for 127.0.0.1 at 2015-12-11 18:30:45 +0100
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 18:30:45 +0100
+
+
+Started GET "/assets/application.self-4fd289fdbe56c59925832493317e43f3856bf01b7b4d9a8738c0ce27c7836e82.css?body=1" for 127.0.0.1 at 2015-12-11 18:30:45 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-11 18:30:45 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-11 18:30:45 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-11 18:30:45 +0100
+
+
+Started GET "/assets/achievements.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 18:30:45 +0100
+
+
+Started GET "/assets/buttons.self-1fbdd6163b54656562753addcf8acb28b112e2599bc1ed2ce9a63bf160c188e8.js?body=1" for 127.0.0.1 at 2015-12-11 18:30:45 +0100
+
+
+Started GET "/assets/geolocation.self-d48c4449112dab7084b153f5a931a2c1d4924876b71aca965a29622dff3e5621.js?body=1" for 127.0.0.1 at 2015-12-11 18:30:45 +0100
+
+
+Started GET "/assets/markers.self-9d4b4dd99ae4335f7cbc46f73f0cb31e25d5f8d575aef336b9b5f0a78223de64.js?body=1" for 127.0.0.1 at 2015-12-11 18:30:45 +0100
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 18:30:45 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-11 18:30:45 +0100
+
+
+Started GET "/api/achievements" for 127.0.0.1 at 2015-12-11 18:30:46 +0100
+
+SyntaxError (/home/cuquix/code/Ijustdid/app/controllers/achievements_controller.rb:19: syntax error, unexpected keyword_do_block
+/home/cuquix/code/Ijustdid/app/controllers/achievements_controller.rb:38: syntax error, unexpected keyword_end, expecting $end):
+  app/controllers/achievements_controller.rb:19: syntax error, unexpected keyword_do_block
+  app/controllers/achievements_controller.rb:38: syntax error, unexpected keyword_end, expecting $end
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (2.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (115.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (25.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (47.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-11 18:31:28 +0100
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 108ms (Views: 106.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/achievements.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 18:31:28 +0100
+
+
+Started GET "/assets/application.self-4fd289fdbe56c59925832493317e43f3856bf01b7b4d9a8738c0ce27c7836e82.css?body=1" for 127.0.0.1 at 2015-12-11 18:31:28 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-11 18:31:28 +0100
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 18:31:28 +0100
+
+
+Started GET "/assets/geolocation.self-5eb62fa0e93f3f4b522ce78149aef075579a1fe079db1645fcc9d53fd64188d2.css?body=1" for 127.0.0.1 at 2015-12-11 18:31:28 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-11 18:31:28 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-11 18:31:28 +0100
+
+
+Started GET "/assets/achievements.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 18:31:28 +0100
+
+
+Started GET "/assets/buttons.self-1fbdd6163b54656562753addcf8acb28b112e2599bc1ed2ce9a63bf160c188e8.js?body=1" for 127.0.0.1 at 2015-12-11 18:31:28 +0100
+
+
+Started GET "/assets/geolocation.self-d48c4449112dab7084b153f5a931a2c1d4924876b71aca965a29622dff3e5621.js?body=1" for 127.0.0.1 at 2015-12-11 18:31:28 +0100
+
+
+Started GET "/assets/markers.self-9d4b4dd99ae4335f7cbc46f73f0cb31e25d5f8d575aef336b9b5f0a78223de64.js?body=1" for 127.0.0.1 at 2015-12-11 18:31:28 +0100
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 18:31:28 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-11 18:31:28 +0100
+
+
+Started GET "/api/achievements" for 127.0.0.1 at 2015-12-11 18:31:29 +0100
+
+SyntaxError (/home/cuquix/code/Ijustdid/app/controllers/achievements_controller.rb:19: syntax error, unexpected keyword_do_block
+/home/cuquix/code/Ijustdid/app/controllers/achievements_controller.rb:38: syntax error, unexpected keyword_end, expecting $end):
+  app/controllers/achievements_controller.rb:19: syntax error, unexpected keyword_do_block
+  app/controllers/achievements_controller.rb:38: syntax error, unexpected keyword_end, expecting $end
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.2ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (2.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (30.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (27.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (58.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-11 18:31:49 +0100
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 135ms (Views: 131.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/achievements.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 18:31:49 +0100
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 18:31:49 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-11 18:31:49 +0100
+
+
+Started GET "/assets/geolocation.self-5eb62fa0e93f3f4b522ce78149aef075579a1fe079db1645fcc9d53fd64188d2.css?body=1" for 127.0.0.1 at 2015-12-11 18:31:49 +0100
+
+
+Started GET "/assets/application.self-4fd289fdbe56c59925832493317e43f3856bf01b7b4d9a8738c0ce27c7836e82.css?body=1" for 127.0.0.1 at 2015-12-11 18:31:49 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-11 18:31:49 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-11 18:31:49 +0100
+
+
+Started GET "/assets/achievements.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 18:31:49 +0100
+
+
+Started GET "/assets/buttons.self-1fbdd6163b54656562753addcf8acb28b112e2599bc1ed2ce9a63bf160c188e8.js?body=1" for 127.0.0.1 at 2015-12-11 18:31:49 +0100
+
+
+Started GET "/assets/geolocation.self-d48c4449112dab7084b153f5a931a2c1d4924876b71aca965a29622dff3e5621.js?body=1" for 127.0.0.1 at 2015-12-11 18:31:49 +0100
+
+
+Started GET "/assets/markers.self-9d4b4dd99ae4335f7cbc46f73f0cb31e25d5f8d575aef336b9b5f0a78223de64.js?body=1" for 127.0.0.1 at 2015-12-11 18:31:49 +0100
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 18:31:49 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-11 18:31:49 +0100
+
+
+Started GET "/api/achievements" for 127.0.0.1 at 2015-12-11 18:31:50 +0100
+Processing by AchievementsController#index as JSON
+  [1m[35mAchievement Load (221.0ms)[0m  SELECT "achievements".* FROM "achievements"
+  Rendered achievements/index.json.jbuilder (373.4ms)
+Completed 200 OK in 467ms (Views: 188.9ms | ActiveRecord: 224.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-11 18:33:08 +0100
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 89ms (Views: 87.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/achievements.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 18:33:08 +0100
+
+
+Started GET "/assets/geolocation.self-5eb62fa0e93f3f4b522ce78149aef075579a1fe079db1645fcc9d53fd64188d2.css?body=1" for 127.0.0.1 at 2015-12-11 18:33:08 +0100
+
+
+Started GET "/assets/application.self-4fd289fdbe56c59925832493317e43f3856bf01b7b4d9a8738c0ce27c7836e82.css?body=1" for 127.0.0.1 at 2015-12-11 18:33:08 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-11 18:33:08 +0100
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 18:33:08 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-11 18:33:08 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-11 18:33:08 +0100
+
+
+Started GET "/assets/achievements.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 18:33:08 +0100
+
+
+Started GET "/assets/buttons.self-1fbdd6163b54656562753addcf8acb28b112e2599bc1ed2ce9a63bf160c188e8.js?body=1" for 127.0.0.1 at 2015-12-11 18:33:08 +0100
+
+
+Started GET "/assets/markers.self-513665077de81b5c450e7e3ca6f47bb0eaba4e7954e9bc674195bd865442b31b.js?body=1" for 127.0.0.1 at 2015-12-11 18:33:08 +0100
+
+
+Started GET "/assets/geolocation.self-d48c4449112dab7084b153f5a931a2c1d4924876b71aca965a29622dff3e5621.js?body=1" for 127.0.0.1 at 2015-12-11 18:33:08 +0100
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 18:33:08 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-11 18:33:08 +0100
+
+
+Started GET "/api/achievements" for 127.0.0.1 at 2015-12-11 18:33:09 +0100
+Processing by AchievementsController#index as JSON
+  [1m[36mAchievement Load (1.5ms)[0m  [1mSELECT "achievements".* FROM "achievements"[0m
+  Rendered achievements/index.json.jbuilder (7.3ms)
+Completed 200 OK in 113ms (Views: 110.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-11 18:39:46 +0100
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 244ms (Views: 242.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/achievements.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 18:39:47 +0100
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 18:39:47 +0100
+
+
+Started GET "/assets/geolocation.self-5eb62fa0e93f3f4b522ce78149aef075579a1fe079db1645fcc9d53fd64188d2.css?body=1" for 127.0.0.1 at 2015-12-11 18:39:47 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-11 18:39:47 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-11 18:39:47 +0100
+
+
+Started GET "/assets/application.self-4fd289fdbe56c59925832493317e43f3856bf01b7b4d9a8738c0ce27c7836e82.css?body=1" for 127.0.0.1 at 2015-12-11 18:39:47 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-11 18:39:47 +0100
+
+
+Started GET "/assets/achievements.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 18:39:47 +0100
+
+
+Started GET "/assets/buttons.self-1fbdd6163b54656562753addcf8acb28b112e2599bc1ed2ce9a63bf160c188e8.js?body=1" for 127.0.0.1 at 2015-12-11 18:39:47 +0100
+
+
+Started GET "/assets/markers.self-79db4afff16a865d80d23ee97e3717ebdae70725f6c676ad8f0090f0da7cab75.js?body=1" for 127.0.0.1 at 2015-12-11 18:39:47 +0100
+
+
+Started GET "/assets/geolocation.self-d48c4449112dab7084b153f5a931a2c1d4924876b71aca965a29622dff3e5621.js?body=1" for 127.0.0.1 at 2015-12-11 18:39:47 +0100
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 18:39:47 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-11 18:39:47 +0100
+
+
+Started GET "/api/achievements" for 127.0.0.1 at 2015-12-11 18:39:47 +0100
+Processing by AchievementsController#index as JSON
+  [1m[35mAchievement Load (0.5ms)[0m  SELECT "achievements".* FROM "achievements"
+  Rendered achievements/index.json.jbuilder (4.5ms)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-11 18:41:10 +0100
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 266ms (Views: 265.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/achievements.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 18:41:11 +0100
+
+
+Started GET "/assets/geolocation.self-5eb62fa0e93f3f4b522ce78149aef075579a1fe079db1645fcc9d53fd64188d2.css?body=1" for 127.0.0.1 at 2015-12-11 18:41:11 +0100
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 18:41:11 +0100
+
+
+Started GET "/assets/application.self-4fd289fdbe56c59925832493317e43f3856bf01b7b4d9a8738c0ce27c7836e82.css?body=1" for 127.0.0.1 at 2015-12-11 18:41:11 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-11 18:41:11 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-11 18:41:11 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-11 18:41:11 +0100
+
+
+Started GET "/assets/achievements.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 18:41:11 +0100
+
+
+Started GET "/assets/buttons.self-1fbdd6163b54656562753addcf8acb28b112e2599bc1ed2ce9a63bf160c188e8.js?body=1" for 127.0.0.1 at 2015-12-11 18:41:11 +0100
+
+
+Started GET "/assets/geolocation.self-d48c4449112dab7084b153f5a931a2c1d4924876b71aca965a29622dff3e5621.js?body=1" for 127.0.0.1 at 2015-12-11 18:41:11 +0100
+
+
+Started GET "/assets/markers.self-9f06a6a0f0e1049e5c91f20b1d46f5679c61f168aa0d2557159ab27d406ef275.js?body=1" for 127.0.0.1 at 2015-12-11 18:41:11 +0100
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 18:41:11 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-11 18:41:11 +0100
+
+
+Started GET "/api/achievements" for 127.0.0.1 at 2015-12-11 18:41:11 +0100
+Processing by AchievementsController#index as JSON
+  [1m[36mAchievement Load (0.6ms)[0m  [1mSELECT "achievements".* FROM "achievements"[0m
+  Rendered achievements/index.json.jbuilder (3.7ms)
+Completed 200 OK in 78ms (Views: 76.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-11 18:43:34 +0100
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 280ms (Views: 278.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/achievements.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 18:43:35 +0100
+
+
+Started GET "/assets/geolocation.self-5eb62fa0e93f3f4b522ce78149aef075579a1fe079db1645fcc9d53fd64188d2.css?body=1" for 127.0.0.1 at 2015-12-11 18:43:35 +0100
+
+
+Started GET "/assets/application.self-4fd289fdbe56c59925832493317e43f3856bf01b7b4d9a8738c0ce27c7836e82.css?body=1" for 127.0.0.1 at 2015-12-11 18:43:35 +0100
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 18:43:35 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-11 18:43:35 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-11 18:43:35 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-11 18:43:35 +0100
+
+
+Started GET "/assets/achievements.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 18:43:35 +0100
+
+
+Started GET "/assets/buttons.self-1fbdd6163b54656562753addcf8acb28b112e2599bc1ed2ce9a63bf160c188e8.js?body=1" for 127.0.0.1 at 2015-12-11 18:43:35 +0100
+
+
+Started GET "/assets/geolocation.self-d48c4449112dab7084b153f5a931a2c1d4924876b71aca965a29622dff3e5621.js?body=1" for 127.0.0.1 at 2015-12-11 18:43:35 +0100
+
+
+Started GET "/assets/markers.self-05e246ec01fd9f9d53112393bc5ad59003e301cdfd1cda4957b7e9e06c990d67.js?body=1" for 127.0.0.1 at 2015-12-11 18:43:35 +0100
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 18:43:35 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-11 18:43:35 +0100
+
+
+Started GET "/api/achievements" for 127.0.0.1 at 2015-12-11 18:43:35 +0100
+Processing by AchievementsController#index as JSON
+  [1m[35mAchievement Load (0.6ms)[0m  SELECT "achievements".* FROM "achievements"
+  Rendered achievements/index.json.jbuilder (4.2ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-11 18:44:13 +0100
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 237ms (Views: 236.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/achievements.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 18:44:13 +0100
+
+
+Started GET "/assets/geolocation.self-5eb62fa0e93f3f4b522ce78149aef075579a1fe079db1645fcc9d53fd64188d2.css?body=1" for 127.0.0.1 at 2015-12-11 18:44:13 +0100
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 18:44:13 +0100
+
+
+Started GET "/assets/application.self-4fd289fdbe56c59925832493317e43f3856bf01b7b4d9a8738c0ce27c7836e82.css?body=1" for 127.0.0.1 at 2015-12-11 18:44:13 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-11 18:44:13 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-11 18:44:13 +0100
+
+
+Started GET "/assets/buttons.self-1fbdd6163b54656562753addcf8acb28b112e2599bc1ed2ce9a63bf160c188e8.js?body=1" for 127.0.0.1 at 2015-12-11 18:44:13 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-11 18:44:13 +0100
+
+
+Started GET "/assets/achievements.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 18:44:13 +0100
+
+
+Started GET "/assets/geolocation.self-d48c4449112dab7084b153f5a931a2c1d4924876b71aca965a29622dff3e5621.js?body=1" for 127.0.0.1 at 2015-12-11 18:44:13 +0100
+
+
+Started GET "/assets/markers.self-95914c8d8c0d3c377d93c18456a465662892bbb243dfe8ba6b45ea4a9f5280a6.js?body=1" for 127.0.0.1 at 2015-12-11 18:44:13 +0100
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 18:44:13 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-11 18:44:14 +0100
+
+
+Started GET "/api/achievements" for 127.0.0.1 at 2015-12-11 18:44:14 +0100
+Processing by AchievementsController#index as JSON
+  [1m[36mAchievement Load (0.6ms)[0m  [1mSELECT "achievements".* FROM "achievements"[0m
+  Rendered achievements/index.json.jbuilder (4.2ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-11 19:17:31 +0100
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 700ms (Views: 641.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/achievements.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 19:17:33 +0100
+
+
+Started GET "/assets/geolocation.self-5eb62fa0e93f3f4b522ce78149aef075579a1fe079db1645fcc9d53fd64188d2.css?body=1" for 127.0.0.1 at 2015-12-11 19:17:33 +0100
+
+
+Started GET "/assets/application.self-4fd289fdbe56c59925832493317e43f3856bf01b7b4d9a8738c0ce27c7836e82.css?body=1" for 127.0.0.1 at 2015-12-11 19:17:33 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-11 19:17:33 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-11 19:17:33 +0100
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 19:17:33 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-11 19:17:33 +0100
+
+
+Started GET "/assets/buttons.self-1fbdd6163b54656562753addcf8acb28b112e2599bc1ed2ce9a63bf160c188e8.js?body=1" for 127.0.0.1 at 2015-12-11 19:17:33 +0100
+
+
+Started GET "/assets/achievements.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 19:17:33 +0100
+
+
+Started GET "/assets/markers.self-27fbb461ff1ff171ac7fafdf957042ead410f9c69369b62021f4c838496bb13d.js?body=1" for 127.0.0.1 at 2015-12-11 19:17:33 +0100
+
+
+Started GET "/assets/geolocation.self-d48c4449112dab7084b153f5a931a2c1d4924876b71aca965a29622dff3e5621.js?body=1" for 127.0.0.1 at 2015-12-11 19:17:33 +0100
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 19:17:33 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-11 19:17:33 +0100
+
+
+Started GET "/api/achievements" for 127.0.0.1 at 2015-12-11 19:17:34 +0100
+Processing by AchievementsController#index as JSON
+  [1m[35mAchievement Load (119.0ms)[0m  SELECT "achievements".* FROM "achievements"
+  Rendered achievements/index.json.jbuilder (123.0ms)
+Completed 200 OK in 162ms (Views: 42.3ms | ActiveRecord: 119.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-11 19:21:38 +0100
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 226ms (Views: 225.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/achievements.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 19:21:39 +0100
+
+
+Started GET "/assets/geolocation.self-5eb62fa0e93f3f4b522ce78149aef075579a1fe079db1645fcc9d53fd64188d2.css?body=1" for 127.0.0.1 at 2015-12-11 19:21:39 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-11 19:21:39 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-11 19:21:39 +0100
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 19:21:39 +0100
+
+
+Started GET "/assets/application.self-4fd289fdbe56c59925832493317e43f3856bf01b7b4d9a8738c0ce27c7836e82.css?body=1" for 127.0.0.1 at 2015-12-11 19:21:39 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-11 19:21:39 +0100
+
+
+Started GET "/assets/achievements.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 19:21:39 +0100
+
+
+Started GET "/assets/buttons.self-1fbdd6163b54656562753addcf8acb28b112e2599bc1ed2ce9a63bf160c188e8.js?body=1" for 127.0.0.1 at 2015-12-11 19:21:39 +0100
+
+
+Started GET "/assets/geolocation.self-d48c4449112dab7084b153f5a931a2c1d4924876b71aca965a29622dff3e5621.js?body=1" for 127.0.0.1 at 2015-12-11 19:21:39 +0100
+
+
+Started GET "/assets/markers.self-973834d60288c8c120d6dbb8f096b961faaf6bc49cfd939eba2607091c36b889.js?body=1" for 127.0.0.1 at 2015-12-11 19:21:39 +0100
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 19:21:39 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-11 19:21:39 +0100
+
+
+Started GET "/api/achievements" for 127.0.0.1 at 2015-12-11 19:21:39 +0100
+Processing by AchievementsController#index as JSON
+  [1m[36mAchievement Load (0.6ms)[0m  [1mSELECT "achievements".* FROM "achievements"[0m
+  Rendered achievements/index.json.jbuilder (3.6ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-11 19:22:15 +0100
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 221ms (Views: 220.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/geolocation.self-5eb62fa0e93f3f4b522ce78149aef075579a1fe079db1645fcc9d53fd64188d2.css?body=1" for 127.0.0.1 at 2015-12-11 19:22:16 +0100
+
+
+Started GET "/assets/application.self-4fd289fdbe56c59925832493317e43f3856bf01b7b4d9a8738c0ce27c7836e82.css?body=1" for 127.0.0.1 at 2015-12-11 19:22:16 +0100
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 19:22:16 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-11 19:22:16 +0100
+
+
+Started GET "/assets/achievements.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 19:22:16 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-11 19:22:16 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-11 19:22:16 +0100
+
+
+Started GET "/assets/achievements.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 19:22:16 +0100
+
+
+Started GET "/assets/buttons.self-1fbdd6163b54656562753addcf8acb28b112e2599bc1ed2ce9a63bf160c188e8.js?body=1" for 127.0.0.1 at 2015-12-11 19:22:16 +0100
+
+
+Started GET "/assets/geolocation.self-d48c4449112dab7084b153f5a931a2c1d4924876b71aca965a29622dff3e5621.js?body=1" for 127.0.0.1 at 2015-12-11 19:22:16 +0100
+
+
+Started GET "/assets/markers.self-e8fbf2db2695d87e57a7a9a454871d84f360b16fc19034a1eae7f62ac8003260.js?body=1" for 127.0.0.1 at 2015-12-11 19:22:16 +0100
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 19:22:16 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-11 19:22:16 +0100
+
+
+Started GET "/api/achievements" for 127.0.0.1 at 2015-12-11 19:22:16 +0100
+Processing by AchievementsController#index as JSON
+  [1m[35mAchievement Load (0.9ms)[0m  SELECT "achievements".* FROM "achievements"
+  Rendered achievements/index.json.jbuilder (7.2ms)
+Completed 200 OK in 22ms (Views: 18.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-11 19:22:35 +0100
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 229ms (Views: 228.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/achievements.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 19:22:36 +0100
+
+
+Started GET "/assets/geolocation.self-5eb62fa0e93f3f4b522ce78149aef075579a1fe079db1645fcc9d53fd64188d2.css?body=1" for 127.0.0.1 at 2015-12-11 19:22:36 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-11 19:22:36 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-11 19:22:36 +0100
+
+
+Started GET "/assets/application.self-4fd289fdbe56c59925832493317e43f3856bf01b7b4d9a8738c0ce27c7836e82.css?body=1" for 127.0.0.1 at 2015-12-11 19:22:36 +0100
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-11 19:22:36 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-11 19:22:36 +0100
+
+
+Started GET "/assets/buttons.self-1fbdd6163b54656562753addcf8acb28b112e2599bc1ed2ce9a63bf160c188e8.js?body=1" for 127.0.0.1 at 2015-12-11 19:22:36 +0100
+
+
+Started GET "/assets/geolocation.self-d48c4449112dab7084b153f5a931a2c1d4924876b71aca965a29622dff3e5621.js?body=1" for 127.0.0.1 at 2015-12-11 19:22:36 +0100
+
+
+Started GET "/assets/achievements.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 19:22:36 +0100
+
+
+Started GET "/assets/markers.self-e27754cc036df5cd4aafb0966fcb662d25d8af3620b8e3e78a66d0d9ef2044cf.js?body=1" for 127.0.0.1 at 2015-12-11 19:22:36 +0100
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-11 19:22:36 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-11 19:22:36 +0100
+
+
+Started GET "/api/achievements" for 127.0.0.1 at 2015-12-11 19:22:36 +0100
+Processing by AchievementsController#index as JSON
+  [1m[36mAchievement Load (2.7ms)[0m  [1mSELECT "achievements".* FROM "achievements"[0m
+  Rendered achievements/index.json.jbuilder (5.2ms)
+Completed 200 OK in 15ms (Views: 10.4ms | ActiveRecord: 2.7ms)

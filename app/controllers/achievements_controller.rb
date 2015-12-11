@@ -16,11 +16,6 @@ class AchievementsController < ApplicationController
 
 	def index
 		@achievements = Achievement.all
-		@achievements.map |e| do
-			user = User.find(e.user_id)
-			@achievevements << user.name
-
-		end
 	end
 
 
