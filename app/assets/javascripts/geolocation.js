@@ -1,112 +1,54 @@
 var map;
+var achievements ={};
 
-$(document).on('ready', function() {
+
+function initMap(position){
+  var centerMadrid = {lat: 40.4167754, lng: -3.7037902};
+
+  createMap(centerMadrid);
+  setupAutocomplete();
+
   if ("geolocation" in navigator){
-    navigator.geolocation.getCurrentPosition(onLocation, onError);
+      navigator.geolocation.getCurrentPosition(onLocation, onError);
   }
-});
+};
+
 
 function onLocation(position){
-  var centerMadrid = {
-    lat: 40.4167754,
-    lng: -3.7037902
-  };
-  var myPosition = centerMadrid;
+  var userPosition = {lat: position.coords.latitude, lng: position.coords.longitude};
+  map.setCenter(new google.maps.LatLng(position.coords.latitude, position.coords.longitude, 16));
+  createMarker(userPosition);
+};
 
-  if (position) {
-    var myPosition = {
-      lat: position.coords.latitude,
-      lng: position.coords.longitude
-    };
-  }
-  console.log(myPosition)
-
-  createMap(myPosition);
-  setupAutocomplete();
-} 
 
 function onError(error){
   console.log("What are you using, IE 7??" + error);
 }
 
-function createMap(myPosition){
+
+function createMap(Position){
   map = new google.maps.Map($('#map')[0], {
-  	center: myPosition,
+  	center: Position,
     zoom: 16
   });
-
-  createMarker(myPosition);
 
   $.ajax({
     url : '/api/achievements',
     dataType : "json",
     success : function(response) {
       console.log(response)
-      response.forEach(function(position){
-        console.log(position.lonlat);
-        createAllMarkers(position.lonlat);
-      })
+      response.forEach(createAllMarkers);
     },
+
     fail: function(error){
       console.error("Error running the ajax script: " + error);
     }
   });
 }
 
-// Markers-----------------
-
-function createMarker (position) {
-  var marker = new google.maps.Marker({
-  	position: position,
-  	map: map,
-    title: 'your position'
-  });
-  marker.addListener('click', function() {
-    InfoWindow.open(map, marker);
-  });
-
-  var contentString = '<div id="content">'+
-    '<div id="siteNotice">'+
-    '</div>'+
-    '<h1 id="firstHeading" class="firstHeading">You are here</h1>'+
-    '<div id="bodyContent">'+
-    '<p><b>Look around you to see what are your neighbors doing!</b>'+
-    '<p>Link: You must be logged to add your own achievements.</p>' + 
-    '<p>You can also add a link to your video</p>'
-    '</div>'+
-    '</div>';
-
-  var InfoWindow = new google.maps.InfoWindow({
-    content: contentString
-  });
-};
-
-function createAllMarkers (lonlat) {
-  var coordinates = lonlat.replace(/[^\d.-]/g, '');
-  var clear = [coordinates.slice(0, 10), " ", coordinates.slice(10)].join('').split(" ");
-
-  var myLatLng = new google.maps.LatLng(parseFloat(clear[0]),parseFloat(clear[1]));
-
-  var marker = new google.maps.Marker({
-    position: myLatLng,
-    map: map
-  });
-  console.log('creating extra marker');
-
-  marker.addListener('click', function() {
-    InfoWindow.open(map, marker);
-  });
-
-  var achievement_text = '<p>You can also add a link to your video</p>';
-  
-  var InfoWindow = new google.maps.InfoWindow({
-    content: achievement_text
-  });
-};
-
 // Autocomplete --------------
 
-function setupAutocomplete(){
+function setupAutocomplete() {
   var input = $('#get-places')[0];
   var autocomplete = new google.maps.places.Autocomplete(input);
   
@@ -118,11 +60,6 @@ function setupAutocomplete(){
     }else{
       alert("The place has no location..?")
     }
-    createMarker(place.geometry.location);
     console.log(place);
   });
-}
-
-function create_achievement(){
-
 }

@@ -28,28 +28,28 @@
 					  <li role="presentation" class="active" id="categories"><a href="#">Categories</a></li>
 					  <li class='categories-menu hidden'>
 					  	<div class="checkbox">
-    						<label><input type="checkbox"> <p> Family </p> </label>
+    						<label><input type="checkbox" id="Family-checkbox" data-hook="Family" checked> <p> Family </p> </label>
       				</div>
       				<div class="checkbox">	
-      					<label><input type="checkbox"> <p> Technology </p> </label>
+      					<label><input type="checkbox" id="Technology-checkbox" data-hook="Technology" checked> <p> Technology </p> </label>
       				</div>
       				<div class="checkbox">	
-      					<label><input type="checkbox"> <p> Business </p> </label>
+      					<label><input type="checkbox" id="Business-checkbox" data-hook="Business" checked> <p> Business </p> </label>
       				</div>
       				<div class="checkbox">	
-      					<label><input type="checkbox"> <p> Art </p> </label>
+      					<label><input type="checkbox" id="Art-checkbox" data-hook="Art" checked> <p> Art </p> </label>
       				</div>
       				<div class="checkbox">	
-      					<label><input type="checkbox"> <p> Entrepreneurship </p> </label>
+      					<label><input type="checkbox" id="Entrepreneurship-checkbox" data-hook="Entrepreneurship" checked> <p> Entrepreneurship </p> </label>
       				</div>
       				<div class="checkbox">	
-      					<label><input type="checkbox"> <p> Studies </p> </label>
+      					<label><input type="checkbox" id="Studies-checkbox" data-hook="Studies" checked> <p> Studies </p> </label>
       				</div>
       				<div class="checkbox">	
-      					<label><input type="checkbox"> <p> Programming </p> </label>
+      					<label><input type="checkbox" id="Coding-checkbox" data-hook="Coding" checked> <p> Coding </p> </label>
       				</div>
       				<div class="checkbox">	
-      					<label><input type="checkbox"> <p> Sports </p> </label>
+      					<label><input type="checkbox" id="Sports-checkbox" data-hook="Sports" checked> <p> Sports </p> </label>
     					</div>
 					  </li>
 					  <li role="presentation"><a href="#">Distance</a></li>
@@ -58,26 +58,6 @@
         </div>
     </div>
 	</div>
-
-	<script type="text/javascript">
-
-		$('#get-started').on("click",function () {
-			console.log('removing the intro box');
-			$('.jumbotron').hide(500);
-			$('.col-lg-3').removeClass('hidden');
-		});
-
-		$('#categories').on("click",function () {
-			console.log('adding categories');
-			$('.categories-menu').toggleClass('hidden');
-		});
-
-		$('#create-achievement').on("click",function () {
-			console.log('creating achievement');
-			create_achievement();
-		});
-
-	</script>
 
 </body>
 </html>

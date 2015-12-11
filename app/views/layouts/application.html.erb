@@ -3,7 +3,7 @@
 <head>
   <title>Ijustdid</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application', "http://maps.googleapis.com/maps/api/js?libraries=places" %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -11,7 +11,7 @@
 <body>
 
 	<nav class="navbar navbar-default">
-		<a class="navbar-brand" style="color:rgb(255, 101, 0)">I Just did </a>
+		<a class="navbar-brand" style="color:rgb(255, 101, 0)"> I Just did </a>
 
 		<form class="navbar-form navbar-left" role="search">
 		 	<div class="form-group">
@@ -32,5 +32,6 @@
 		<p>Powered by David  |  Ironhack 2015</p>
 	</footer>
 
+	<%= javascript_include_tag "http://maps.googleapis.com/maps/api/js?libraries=places&callback=initMap" %>
 </body>
 </html>
