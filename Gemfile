@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'pry'
 gem 'activerecord-postgis-adapter'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

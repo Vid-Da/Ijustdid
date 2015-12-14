@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: 'users#home'
 
   get '/api/achievements' => 'achievements#index'
+  post '/api/achievements' => 'achievements#create'
   get "/api/achievements/new" => "achievements#create"
   get "/api/achievments/:id" => "achievements#show"
 

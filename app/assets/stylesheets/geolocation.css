@@ -1,17 +1,14 @@
-html {
+html, body {
 	height: 100%
 }
 
-body {
-	height: 100%
-}
 
 #map {
 	width: 100%;
-	height: 500px
+	height: 750px
 }
 
-.container-mio {
+.main-container {
 	width: 93%;
 	margin: auto;
 }
@@ -21,16 +18,16 @@ body {
 }
 
 .jumbotron {
-	min-height: 600px;
+	min-height: 800px;
 	background: url('http://7-themes.com/data_images/out/42/6911784-orange-abstract.jpg') no-repeat center center;
 }
 
-.create-achievement {
-	float: right;
+.pac-container {
+  z-index: 1051 !important;
 }
 
 footer {
 	margin-top: 40px;
 	text-align: center;
-	font-size: 15px;
+	font-size: 17px;
 }

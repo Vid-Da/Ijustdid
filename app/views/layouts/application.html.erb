@@ -2,11 +2,12 @@
 <html>
 <head>
   <title>Ijustdid</title>
+  <meta charset="utf-8">
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -17,7 +18,7 @@
 		 	<div class="form-group">
 		   <input type="text" class="form-control" id='get-places' placeholder="Enter your address">
 		  </div>
-		  <button type="submit" class="btn btn-default">Just Do!</button>
+		  <button type="submit" class="btn btn-default"> Just Do!</button>
 		</form>
 
 		<div class="navbar-form navbar-right" role="search">
@@ -29,7 +30,7 @@
 <%= yield %>
 
 	<footer>
-		<p>Powered by David  |  Ironhack 2015</p>
+		<p><strong>Powered by David  |  Ironhack 2015</strong></p>
 	</footer>
 
 	<%= javascript_include_tag "http://maps.googleapis.com/maps/api/js?libraries=places&callback=initMap" %>

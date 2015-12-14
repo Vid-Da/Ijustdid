@@ -14,17 +14,17 @@
 		 </div>
 	</div>
 
-	<div class="container-mio">
+	<div class="main-container">
 	   <div class="row">
 	      <div class="col-lg-9">
 					<div id="map"></div>
-					
-		  			<!--<img src="http://periodicoaspectos.com/wp-content/uploads/2015/11/ojby5fx5vgxsfhihqq1o.png" style="width:90%; height:85%">-->
 	      </div>
 
         <div class="col-lg-3 hidden">
         	<ul display: 'none' class="nav nav-pills nav-stacked">
-        		<li><a class="btn btn-warning btn-lg" id="create-achievement" role="button">Do it !</a></li>
+        		<li>
+              <a type="button" role="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myModal">I Just Did</a>
+            </li>
 					  <li role="presentation" class="active" id="categories"><a href="#">Categories</a></li>
 					  <li class='categories-menu hidden'>
 					  	<div class="checkbox">
@@ -58,6 +58,64 @@
         </div>
     </div>
 	</div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">What have you done ?</h3>
+        </div>
+        <div class="modal-body">
+
+          <form class="new-achievement" role="form">
+            <div class="form-group">
+              <label for="title">Title:</label>
+              <input type="string" class="form-control" id="title">
+            </div>
+            <div class="form-group">
+              <label for="description">Description:</label>
+              <textarea class="form-control" rows="3" id="text-description"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="date">Location:</label>
+              <input type="text" class="form-control ui-autocomplete" id="new-location">
+            </div>
+            <div class="form-group">
+              <label for="link">Link (if available):</label>
+              <input type="string" class="form-control" id="link">
+            </div>
+            <div class="form-group">
+              <label for="date">Date:</label>
+              <input type="date" class="form-control" id="date">
+            </div>
+
+            <div class="form-group select-category">
+              <label for="description">Category:</label>
+              <select class="form-control" id="category" placeholder="Choose one category of the list..">
+                <option value="" selected disabled>Choose one category from the list..</option>
+                <option>Family</option>
+                <option>Technology</option>
+                <option>Business</option>
+                <option>Art</option>
+                <option>Entrepreneurship</option>
+                <option>Studies</option>
+                <option>Coding</option>
+                <option>Sports</option>
+              </select>
+            </div>
+          </form>
+         
+        </div>
+        <div class="modal-footer">
+          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+          <button type="button" class="btn btn-warning btn-lg" id="submit">Save achievement</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>

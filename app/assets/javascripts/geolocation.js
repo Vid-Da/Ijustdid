@@ -1,7 +1,6 @@
 var map;
 var achievements ={};
 
-
 function initMap(position){
   var centerMadrid = {lat: 40.4167754, lng: -3.7037902};
 
@@ -52,6 +51,11 @@ function setupAutocomplete() {
   var input = $('#get-places')[0];
   var autocomplete = new google.maps.places.Autocomplete(input);
   
+  var input_new = $('#new-location')[0];
+  if (typeof input_new !=='undefined') {
+    var autocomplete = new google.maps.places.Autocomplete(input_new);
+  };
+  
   autocomplete.addListener('place_changed', function(){
     var place = autocomplete.getPlace();
     if (place.geometry.location) {
@@ -60,6 +64,35 @@ function setupAutocomplete() {
     }else{
       alert("The place has no location..?")
     }
+
     console.log(place);
   });
 }
+
+// Create achievement ----------
+
+function create_achievement(data_new_achievement) {
+
+  $.ajax({
+    type : 'POST',
+    url : '/api/achievements',
+    dataType : "json",
+    beforeSend: function(xhr, settings) {
+      xhr.setRequestHeader("Accept", "application/json");
+      var token=$('meta[name="csrf-token"]').attr('content');
+      xhr.setRequestHeader('X-CSRF-Token',token );
+      settings['dataType'] = "json";
+      settings['contentType'] = "application/json";
+    },
+    data : {achievement: data_new_achievement},
+    success : function(data) {
+      console.log(data);
+      console.log(data.geometry.latitude);
+      console.log(data.geometry.longitude);
+      createAllMarkers(place.geometry.location);
+    },
+    fail: function(error){
+      console.error("Error running the ajax script: " + error);
+    }
+  });
+};
