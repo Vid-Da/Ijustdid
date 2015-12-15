@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  root to: 'users#home'
+  root to: 'home#index'
 
   get '/api/achievements' => 'achievements#index'
   post '/api/achievements' => 'achievements#create'
+  delete '/api/achievements/:id' => 'achievements#destroy'
   get "/api/achievements/new" => "achievements#create"
   get "/api/achievments/:id" => "achievements#show"
 
+ resources :achievements, only: [ :show ]
 =begin
                Prefix Verb   URI Pattern                    Controller#Action
         new_user_session GET    /users/sign_in(.:format)       devise/sessions#new
@@ -26,8 +28,8 @@ cancel_user_registration GET    /users/cancel(.:format)        devise/registrati
                          PUT    /users(.:format)               devise/registrations#update
                          DELETE /users(.:format)               devise/registrations#destroy
                     root GET    /                              users#home
-
 =end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

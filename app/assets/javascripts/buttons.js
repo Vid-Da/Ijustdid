@@ -39,12 +39,14 @@ $(document).on('ready', function(){
 		alert("trying to create new achievement");
 		var title = $('#title').val();
 		var description = $('#text-description').val();
-		var lonlat = $('#new-location').val();
+		var latitude = $('#new-location').data("latitude");
+		var longitude = $('#new-location').data("longitude");
+		var location = 'POINT('+ latitude + ' ' + longitude + ')';
 		var link = $('#link').val();
 		var date = $('#link').val();
 		var category = $('#category').val();
 
-		var data_new_achievement = {title: title, description: description, location: lonlat, link: link, date: date, category: category};
+		var data_new_achievement = {title: title, description: description, lonlat: location, link: link, date: date, category: category};
 		create_achievement(data_new_achievement);		
 	});
 

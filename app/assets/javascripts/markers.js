@@ -44,15 +44,15 @@ function createMarker (position) {
     InfoWindow.close(map, marker);
   });
 
-  var contentString = '<div id="content">'+
-      '<div id="siteNotice">'+
+  var contentString = '<div id="welcomeContent">'+
+    '<div id="welcome">'+
     '</div>'+
-    '<h1 id="firstHeading" class="firstHeading">You are here</h1>'+
-    '<div id="bodyContent">'+
-      '<p><b>Look around you to see what your neighbors are doing!</b></p>'+
-      '<p>You must be logged to add your own achievements.</p>' + 
-      '<p>You can also add a link to your video</p>' +
-     '<img src="https://k44.kn3.net/taringa/3/6/5/7/8/2//saborami/ED0.jpg?8564" width="100px" height="100px" alt="no picture available">' +
+    '<h1 id="welcome-firstHeading" class="firstHeading">You are here</h1>'+
+    '<div id="welcome-bodyContent">'+
+    '<p><b>Look around you to see what your neighbors are doing!</b></p>'+
+    '<p>You must be logged to add your own achievements.</p>' + 
+    '<p>You can also add a link to your video</p>' +
+    '<img src="http://www.scrapsyard.com/wp-content/uploads/2015/05/Welcome-Simple-Greeting-Image-520x431.jpg" height:"150px" width="300px" alt="no picture available">' +
     '</div>'+
     '</div>';
 
@@ -69,25 +69,24 @@ function createAllMarkers (position) {
     position: LatLng,
     map: map,
     icon: icons[position.category].icon,
-    size: new google.maps.Size(15, 15),
-    origin: new google.maps.Point(0, 0),
-    anchor: new google.maps.Point(0, 0),
     animation: google.maps.Animation.DROP
   });
   console.log('creating extra marker');
 
- current_infowindow = new google.maps.InfoWindow({
-    content: 'loading'
+  current_infowindow = new google.maps.InfoWindow({
+    content: 'loading',
+    maxWidth: 400
   });
 
-  var achievement_text = '<div id="content">'+
-    '<div id="siteNotice">'+
-    '<h2 id="firstHeading" class="firstHeading">' + position.title + '</h2>'+
-    '<div id="bodyContent">'+
-    '<h3>' + position.category + '</b></h3>' + 
-    '<p><b>' + position.description + '</b></p>'+
-    '<p><img width=auto height="150px" src="' + position.link +'"></p>' +
-    '<p>' + position.date +'</p>' +
+  var achievement_text = '<div id="markerContent">'+
+    '<div id="marker">'+
+    '<h2 id="marker-firstHeading" class="firstHeading">' + position.title + '</h2>'+
+    '<div id="marker-bodyContent">'+
+    '<h4>' + position.description + '</h4>'+
+    '<p>More info:<a href="' + position.link + '">' + position.link + '</a></p>'+
+    '<p>User: ' + position.username + '</p>'+
+    '<p><img width=auto height="150px" src="' + position.image +'"></p>' +
+    '<h4><b>' + position.category + '</b>   |   ' + position.date +'</h4>' +
   
     //'<p> Created by:' + <%= position.user.name %> + '</p>' +
     '</div>'+

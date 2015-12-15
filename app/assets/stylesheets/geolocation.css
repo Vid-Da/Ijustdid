@@ -1,20 +1,9 @@
-html, body {
+html{
 	height: 100%
 }
 
-
-#map {
-	width: 100%;
-	height: 750px
-}
-
-.main-container {
-	width: 93%;
-	margin: auto;
-}
-
-.hidden {
-	display: none;
+body {
+	height: 100%;
 }
 
 .jumbotron {
@@ -22,12 +11,40 @@ html, body {
 	background: url('http://7-themes.com/data_images/out/42/6911784-orange-abstract.jpg') no-repeat center center;
 }
 
+#map {
+	width: 100%;
+	height: 730px
+}
+
+.main-container {
+	width: 93%;
+	margin: auto;
+	font-size: 20px;
+}
+
+.hidden {
+	display: none;
+}
+
 .pac-container {
   z-index: 1051 !important;
 }
 
+#welcome-firstHeading {
+	font-size: 20px;
+}
+
+#marker-bodyContent {
+	font-size: 15px;
+}
+
+#git-logo{
+	float: right;
+}
+
 footer {
-	margin-top: 40px;
+	margin-top: 20px;
 	text-align: center;
 	font-size: 17px;
+	background-color: #337ab7
 }

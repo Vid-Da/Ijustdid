@@ -1,22 +1,33 @@
 require 'pry'
 
 class AchievementsController < ApplicationController
+	before_action :authenticate_user!, only: :create
 
 	def new
 	end
 
 	def create
 		@achievement = Achievement.new(achievement_params)
+		@achievement.user = current_user
 
 		if @achievement.save
-			render json: @achievement, status: :created
+			render status: :created
 		else
-			render(status: :bad_request)
+			render(json: @achievement.errors.full_messages, status: :bad_request)
 		end
 	end
 
 	def index
-		@achievements = Achievement.all
+		@achievements = Achievement.includes(:user).all
+	end
+
+	def show
+		@achievement = Achievement.find(params[:id])
+	end
+
+	def destroy
+		@achievement = Achievement.find(params[:id])
+		@achievement.destroy
 	end
 
 

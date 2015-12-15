@@ -28,14 +28,14 @@ function onError(error){
 function createMap(Position){
   map = new google.maps.Map($('#map')[0], {
   	center: Position,
-    zoom: 16
+    zoom: 17
   });
 
   $.ajax({
     url : '/api/achievements',
     dataType : "json",
     success : function(response) {
-      console.log(response)
+      console.log(response);
       response.forEach(createAllMarkers);
     },
 
@@ -51,20 +51,31 @@ function setupAutocomplete() {
   var input = $('#get-places')[0];
   var autocomplete = new google.maps.places.Autocomplete(input);
   
-  var input_new = $('#new-location')[0];
-  if (typeof input_new !=='undefined') {
-    var autocomplete = new google.maps.places.Autocomplete(input_new);
-  };
-  
+  var input_new = $('#new-location');
+  var autocomplete2 = new google.maps.places.Autocomplete(input_new[0]);
+
   autocomplete.addListener('place_changed', function(){
-    var place = autocomplete.getPlace();
+    var place = autocomplete.getPlace()
     if (place.geometry.location) {
       map.setCenter(place.geometry.location);
       map.setZoom(17);
     }else{
       alert("The place has no location..?")
     }
+    console.log(place);
+  });
 
+  autocomplete2.addListener('place_changed', function(){
+    var place = autocomplete2.getPlace()
+    var location = place.geometry.location
+    if (location) {
+      map.setCenter(location);
+      map.setZoom(17);
+      input_new.data("longitude", location.lng());
+      input_new.data("latitude", location.lat());
+    }else{
+      alert("The place has no location..?")
+    }
     console.log(place);
   });
 }
@@ -77,22 +88,14 @@ function create_achievement(data_new_achievement) {
     type : 'POST',
     url : '/api/achievements',
     dataType : "json",
-    beforeSend: function(xhr, settings) {
-      xhr.setRequestHeader("Accept", "application/json");
-      var token=$('meta[name="csrf-token"]').attr('content');
-      xhr.setRequestHeader('X-CSRF-Token',token );
-      settings['dataType'] = "json";
-      settings['contentType'] = "application/json";
-    },
-    data : {achievement: data_new_achievement},
-    success : function(data) {
-      console.log(data);
-      console.log(data.geometry.latitude);
-      console.log(data.geometry.longitude);
-      createAllMarkers(place.geometry.location);
-    },
-    fail: function(error){
+    data : {achievement: data_new_achievement}
+    })
+    .done(function(data) {
+      createAllMarkers(data);
+
+
+    })
+    .fail(function(error){
       console.error("Error running the ajax script: " + error);
-    }
   });
 };

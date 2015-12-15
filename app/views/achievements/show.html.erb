@@ -1,0 +1,19 @@
+<% if user_signed_in? %>
+	<h2>Welcome <%= current_user.name %>!</h2>
+	<% link_to 'Logout', destroy_user_session_path, method: 'DELETE' %>
+<% else %>
+	<h1> You are not logged:</h1>
+<%end%>
+
+
+<ul>
+	<li><%= @achievement.title %></li>
+	<li><%= @achievement.description %></li>
+	<li><%= @achievement.link %></li>
+	<li><img src="<%= @achievement.image %>"></li>
+	<li><%= @achievement.category %></li>
+	<li><%= @achievement.date %></li>
+	<li><%= @achievement.lonlat %></li>
+</ul>
+
+

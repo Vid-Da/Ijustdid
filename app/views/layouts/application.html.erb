@@ -12,27 +12,31 @@
 <body>
 
 	<nav class="navbar navbar-default">
-		<a class="navbar-brand" style="color:rgb(255, 101, 0)"> I Just did </a>
-
+		<a class="navbar-brand" href="/" style="color:rgb(255, 101, 0)"> I Just Did</a>
 		<form class="navbar-form navbar-left" role="search">
 		 	<div class="form-group">
-		   <input type="text" class="form-control" id='get-places' placeholder="Enter your address">
+		  <input type="text" class="form-control input-lg" id='get-places' placeholder="Enter your address">
 		  </div>
-		  <button type="submit" class="btn btn-default"> Just Do!</button>
+		  <button type="submit" class="btn btn-default btn-lg"> Just Do!</button>
 		</form>
 
 		<div class="navbar-form navbar-right" role="search">
-			<%= link_to "Log in", new_user_session_path, class: "btn btn-warning" %>
-			<%= link_to "Sign up", new_user_registration_path, class: "btn btn-warning" %>
+			<%= link_to "Log in", new_user_session_path, class: "btn btn-warning btn-lg" %>
+			<%= link_to "Sign up", new_user_registration_path, class: "btn btn-warning btn-lg" %>
 		</div>
 	</nav>
 
-<%= yield %>
+	<%= yield %>
 
 	<footer>
-		<p><strong>Powered by David  |  Ironhack 2015</strong></p>
-	</footer>
+		<div id="footer-content">
+			<p><strong>Powered by David  |  Ironhack 2015</strong></p>
+			<a class="github-button" id="git-logo" href="https://github.com/Vid-Da" data-style="mega" data-count-href="/Vid-Da/followers" data-count-api="/users/Vid-Da#followers" data-count-aria-label="# followers on GitHub" aria-label="Follow @Vid-Da on GitHub">Follow @Vid-Da</a>
+		</div>
 
+	</footer>
+	
+	<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
 	<%= javascript_include_tag "http://maps.googleapis.com/maps/api/js?libraries=places&callback=initMap" %>
 </body>
 </html>

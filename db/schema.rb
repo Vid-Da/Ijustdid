@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20151209144834) do
     t.string    "title"
     t.date      "date"
     t.string    "link"
+    t.string    "image"
   end
 
   add_index "achievements", ["user_id"], name: "index_achievements_on_user_id", using: :btree

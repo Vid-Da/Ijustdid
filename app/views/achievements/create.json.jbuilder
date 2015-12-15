@@ -1,3 +1,3 @@
-	json.extract! achievement, :title, :category, :description, :user_id, :link, :date
-	json.latitude achievement.geometry.location.latitude
-	json.longitude achievement.geometry.location.longitude
+json.extract! @achievement, :id, :title, :category, :description, :user_id, :link, :date, :image
+json.latitude @achievement.lonlat.x
+json.longitude @achievement.lonlat.y
