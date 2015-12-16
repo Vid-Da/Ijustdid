@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :achievements
   validates :name, presence: true, uniqueness: true
+
 end

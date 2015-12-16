@@ -10,9 +10,9 @@ Rails.application.routes.draw do
   get "/api/achievments/:id" => "achievements#show"
 
  resources :achievements, only: [ :show ]
+ resources :users, only: [ :show ]
 =begin
-               Prefix Verb   URI Pattern                     Controller#Action
-        new_user_session GET    /users/sign_in(.:format)        devise/sessions#new
+new_user_session GET    /users/sign_in(.:format)        devise/sessions#new
             user_session POST   /users/sign_in(.:format)        devise/sessions#create
     destroy_user_session DELETE /users/sign_out(.:format)       devise/sessions#destroy
            user_password POST   /users/password(.:format)       devise/passwords#create
@@ -34,6 +34,8 @@ cancel_user_registration GET    /users/cancel(.:format)         devise/registrat
     api_achievements_new GET    /api/achievements/new(.:format) achievements#create
                          GET    /api/achievments/:id(.:format)  achievements#show
              achievement GET    /achievements/:id(.:format)     achievements#show
+                    user GET    /users/:id(.:format)            users#show
+
 =end
 
   # The priority is based upon order of creation: first created -> highest priority.

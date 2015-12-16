@@ -43,7 +43,7 @@ $(document).on('ready', function(){
 		var longitude = $('#new-location').data("longitude");
 		var location = 'POINT('+ latitude + ' ' + longitude + ')';
 		var link = $('#link').val();
-		var date = $('#link').val();
+		var date = $('#date').val();
 		var category = $('#category').val();
 
 		var data_new_achievement = {title: title, description: description, lonlat: location, link: link, date: date, category: category};

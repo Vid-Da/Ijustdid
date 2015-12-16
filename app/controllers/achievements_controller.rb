@@ -6,8 +6,7 @@ class AchievementsController < ApplicationController
 	def create
 		@achievement = Achievement.new(achievement_params)
 		if current_user
-			@achievement.user_name = current_user.user_name
-	binding pry
+			@achievement.user_id = current_user.id
 		end
 
 		if @achievement.save

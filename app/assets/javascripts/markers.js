@@ -90,7 +90,7 @@ function createAllMarkers (achievement) {
   '<div id="marker-bodyContent">'+
   '<h4>' + achievement.description + '</h4>'+
   '<p>More info:<a href="' + achievement.link + '">' + achievement.link + '</a></p>'+
-  '<p>User:<a href="/api/users/' + achievement.user_id +'">' + achievement.username + '</a></p>'+
+  '<p>User:<a href="/users/' + achievement.user_id +'">' + achievement.username + '</a></p>'+
   '<img width=auto height="150px" src="' + achievement.image + '" onerror="imgError(this);">' + 
   '<h4><b>Category: ' + achievement.category + '</b>   |   ' + achievement.date +'</h4>' +
   '</div>'+
