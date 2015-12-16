@@ -92,8 +92,6 @@ function create_achievement(data_new_achievement) {
     })
     .done(function(data) {
       createAllMarkers(data);
-
-
     })
     .fail(function(error){
       console.error("Error running the ajax script: " + error);

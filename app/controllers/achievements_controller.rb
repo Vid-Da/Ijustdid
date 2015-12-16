@@ -1,14 +1,14 @@
 require 'pry'
 
 class AchievementsController < ApplicationController
-	before_action :authenticate_user!, only: :create
-
-	def new
-	end
+	before_action :authenticate_user!, only: [:create, :destroy, :show]
 
 	def create
 		@achievement = Achievement.new(achievement_params)
-		@achievement.user = current_user
+		if current_user
+			@achievement.user_name = current_user.user_name
+	binding pry
+		end
 
 		if @achievement.save
 			render status: :created

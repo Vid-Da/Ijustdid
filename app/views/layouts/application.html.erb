@@ -12,21 +12,34 @@
 <body>
 
 	<nav class="navbar navbar-default">
-		<a class="navbar-brand" href="/" style="color:rgb(255, 101, 0)"> I Just Did</a>
-		<form class="navbar-form navbar-left" role="search">
-		 	<div class="form-group">
-		  <input type="text" class="form-control input-lg" id='get-places' placeholder="Enter your address">
-		  </div>
-		  <button type="submit" class="btn btn-default btn-lg"> Just Do!</button>
-		</form>
+		<div class="container-fluid">
+			<a class="navbar-brand" href="/" style="color:rgb(255, 101, 0); font-size: 25px" > I Just Did</a>
+			<form class="navbar-form navbar-left" role="search">
+			 	<div class="form-group">
+			  	<input type="text" class="form-control input-lg" id='get-places' placeholder="Enter your address">
+			  </div>
+			  <button type="submit" class="btn btn-default btn-lg"> Find a place!</button>
+			</form>
 
-		<div class="navbar-form navbar-right" role="search">
-			<%= link_to "Log in", new_user_session_path, class: "btn btn-warning btn-lg" %>
-			<%= link_to "Sign up", new_user_registration_path, class: "btn btn-warning btn-lg" %>
+			<div class="nav navbar-form navbar-right">
+				<% if current_user %>
+					<span style="margin-right: 30px; font-size: 20px">Hi <%= current_user.name %>!</span>
+					<%= link_to "Logout", "/users/sign_out", method: :delete, class: "btn btn-danger btn-lg" %>
+				<% else %>
+					<%= link_to "Log in", new_user_session_path, class: "btn btn-warning btn-lg" %>
+					<%= link_to "Sign up", new_user_registration_path, class: "btn btn-warning btn-lg" %>
+				<% end %>
+			</div>
 		</div>
 	</nav>
 
+
+
+
 	<%= yield %>
+
+
+
 
 	<footer>
 		<div id="footer-content">

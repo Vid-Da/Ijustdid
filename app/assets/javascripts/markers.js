@@ -47,28 +47,34 @@ function createMarker (position) {
   var contentString = '<div id="welcomeContent">'+
     '<div id="welcome">'+
     '</div>'+
-    '<h1 id="welcome-firstHeading" class="firstHeading">You are here</h1>'+
+    '<h2 id="welcome-firstHeading" class="firstHeading">You are here</h2>'+
     '<div id="welcome-bodyContent">'+
-    '<p><b>Look around you to see what your neighbors are doing!</b></p>'+
+    '<h4>Look around you to see what your neighbors are doing</h4>'+
     '<p>You must be logged to add your own achievements.</p>' + 
-    '<p>You can also add a link to your video</p>' +
-    '<img src="http://www.scrapsyard.com/wp-content/uploads/2015/05/Welcome-Simple-Greeting-Image-520x431.jpg" height:"150px" width="300px" alt="no picture available">' +
+    '<p>You can also add a links and images</p>' +
+    '<img src="http://www.scrapsyard.com/wp-content/uploads/2015/05/Welcome-Simple-Greeting-Image-520x431.jpg" height:"150px" width="300px">' +
     '</div>'+
     '</div>';
 
   var InfoWindow = new google.maps.InfoWindow({
-    content: contentString
+    content: contentString,
+    maxWidth: 400
   });
-
 };
 
-function createAllMarkers (position) {
-  var LatLng = new google.maps.LatLng(position.latitude, position.longitude);
+function imgError(image) {
+  image.onerror = "";
+  image.src = "/logo.jpg";
+  return true;
+};
+
+function createAllMarkers (achievement) {
+  var LatLng = new google.maps.LatLng(achievement.latitude, achievement.longitude);
 
   var marker = new google.maps.Marker({
     position: LatLng,
     map: map,
-    icon: icons[position.category].icon,
+    icon: icons[achievement.category].icon,
     animation: google.maps.Animation.DROP
   });
   console.log('creating extra marker');
@@ -79,25 +85,23 @@ function createAllMarkers (position) {
   });
 
   var achievement_text = '<div id="markerContent">'+
-    '<div id="marker">'+
-    '<h2 id="marker-firstHeading" class="firstHeading">' + position.title + '</h2>'+
-    '<div id="marker-bodyContent">'+
-    '<h4>' + position.description + '</h4>'+
-    '<p>More info:<a href="' + position.link + '">' + position.link + '</a></p>'+
-    '<p>User: ' + position.username + '</p>'+
-    '<p><img width=auto height="150px" src="' + position.image +'"></p>' +
-    '<h4><b>' + position.category + '</b>   |   ' + position.date +'</h4>' +
-  
-    //'<p> Created by:' + <%= position.user.name %> + '</p>' +
-    '</div>'+
-    '</div>';
+  '<div id="marker">'+
+  '<h2 id="marker-firstHeading" class="firstHeading"><a href="/api/achievements/' + achievement.id +'">' + achievement.title + '</a></h2>'+
+  '<div id="marker-bodyContent">'+
+  '<h4>' + achievement.description + '</h4>'+
+  '<p>More info:<a href="' + achievement.link + '">' + achievement.link + '</a></p>'+
+  '<p>User:<a href="/api/users/' + achievement.user_id +'">' + achievement.username + '</a></p>'+
+  '<img width=auto height="150px" src="' + achievement.image + '" onerror="imgError(this);">' + 
+  '<h4><b>Category: ' + achievement.category + '</b>   |   ' + achievement.date +'</h4>' +
+  '</div>'+
+  '</div>';
 
   marker.addListener('mouseover', function() {
     current_infowindow.setContent(achievement_text);
     current_infowindow.open(map, marker);
   });
 
-  achievements[position.category] = achievements[position.category] || [];
-  achievements[position.category].push(marker)
-
+  achievements[achievement.category] = achievements[achievement.category] || [];
+  achievements[achievement.category].push(marker)
 };
+//<%= link_to(concert.band, achievements/:id_path(achievements)) %>
