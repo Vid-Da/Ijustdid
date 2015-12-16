@@ -8,9 +8,15 @@
 
 	<div class="jumbotron">
 		<div class="container">
-		  <h1>Welcome to I Just Did!</h1>
-		  <p>Here you will discover how awesome are your neighbors!</p>
-		  <a class="btn btn-primary btn-lg" id="get-started" role="button">Get started</a>
+      <% if current_user %>
+        <h1><%= current_user.name %>, Welcome back to I Just Did!</h1>
+        <p>Keep enjoying the experience</p>
+        <a class="btn btn-info btn-lg" id="get-started" role="button">Keep on</a>
+      <%else%>
+  		  <h1>Welcome to I Just Did!</h1>
+  		  <p>Here you will discover how awesome are your neighbors!</p>
+  		  <a class="btn btn-info btn-lg" id="get-started" role="button">Get started</a>
+      <%end%>
 		 </div>
 	</div>
 
@@ -23,10 +29,10 @@
         <div class="col-lg-3 hidden">
         	<ul display: 'none' class="nav nav-pills nav-stacked">
         		<li>
-              <a type="button" role="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myModal">I Just Did</a>
+              <a type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">I Just Did</a>
             </li>
 					  <li role="presentation" class="active" id="categories"><a href="#">Categories</a></li>
-					  <li class='categories-menu hidden'>
+					  <li class='categories-menu'>
 					  	<div class="checkbox">
     						<label><input type="checkbox" id="Family-checkbox" data-hook="Family" checked> <p> Family </p> </label>
       				</div>

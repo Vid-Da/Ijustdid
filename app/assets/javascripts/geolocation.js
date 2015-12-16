@@ -1,6 +1,7 @@
 var map;
 var achievements ={};
 
+
 function initMap(position){
   var centerMadrid = {lat: 40.4167754, lng: -3.7037902};
 
@@ -12,13 +13,11 @@ function initMap(position){
   }
 };
 
-
 function onLocation(position){
   var userPosition = {lat: position.coords.latitude, lng: position.coords.longitude};
   map.setCenter(new google.maps.LatLng(position.coords.latitude, position.coords.longitude, 16));
   createMarker(userPosition);
 };
-
 
 function onError(error){
   console.log("What are you using, IE 7??" + error);
@@ -92,6 +91,8 @@ function create_achievement(data_new_achievement) {
     })
     .done(function(data) {
       createAllMarkers(data);
+      $('#myModal').modal('toggle');
+      alert("New achievement created");
     })
     .fail(function(error){
       console.error("Error running the ajax script: " + error);

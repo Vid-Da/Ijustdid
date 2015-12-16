@@ -3,7 +3,6 @@ $(document).on('ready', function(){
 	//remove starting jumbotron
 
 	$('#get-started').on("click",function () {
-		console.log('removing the intro box');
 		$('.jumbotron').hide(500);
 		$('.col-lg-3').removeClass('hidden');
 	});
@@ -36,7 +35,7 @@ $(document).on('ready', function(){
 
 	$('#submit').on('click', function(event) {
 		event.preventDefault();
-		alert("trying to create new achievement");
+
 		var title = $('#title').val();
 		var description = $('#text-description').val();
 		var latitude = $('#new-location').data("latitude");
@@ -47,7 +46,8 @@ $(document).on('ready', function(){
 		var category = $('#category').val();
 
 		var data_new_achievement = {title: title, description: description, lonlat: location, link: link, date: date, category: category};
-		create_achievement(data_new_achievement);		
+		create_achievement(data_new_achievement);
+
 	});
 
 });

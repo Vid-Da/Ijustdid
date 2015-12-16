@@ -45,13 +45,30 @@ body {
   z-index: 1051 !important;
 }
 
-
 #marker-bodyContent, #welcome-bodyConten  {
 	font-size: 15px;
 }
 
 #git-logo{
 	float: right;
+}
+
+#background-sign-in {
+	background: url('https://www.muralesyvinilos.com/murales/950188_Escalador_de_Rocas.jpg');
+	background-size: cover;
+	height: 750px;
+	font-size: 20px;
+}
+
+#background {
+	background: url('http://4.bp.blogspot.com/-SuwXXXydPXE/VLJ_AGpPTtI/AAAAAAAAIrA/3oMz5dWFw9U/s1290/_DSC3568.jpg');
+	background-size: cover;
+	height: 750px;
+	font-size: 20px;
+}
+
+#user-information{
+	height: 750px;
 }
 
 footer {
