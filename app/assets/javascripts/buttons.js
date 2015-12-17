@@ -47,7 +47,24 @@ $(document).on('ready', function(){
 
 		var data_new_achievement = {title: title, description: description, lonlat: location, link: link, date: date, category: category};
 		create_achievement(data_new_achievement);
-
 	});
+
+	// destroy achievement
+	$('#delete-achievement').on('click', function(event) {
+		event.preventDefault();
+
+		var title = $('#title').val();
+		var description = $('#text-description').val();
+		var latitude = $('#new-location').data("latitude");
+		var longitude = $('#new-location').data("longitude");
+		var location = 'POINT('+ latitude + ' ' + longitude + ')';
+		var link = $('#link').val();
+		var date = $('#date').val();
+		var category = $('#category').val();
+
+		var data_new_achievement = {title: title, description: description, lonlat: location, link: link, date: date, category: category};
+		create_achievement(data_new_achievement);
+	});
+
 
 });

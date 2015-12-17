@@ -1,4 +1,6 @@
+
 <% if current_user %>
+
 	<div class="container" id="user-information">
 		<h2>Hi <%= current_user.name %>!</h2>
 		<table class=   "table table-user-information">
@@ -14,9 +16,26 @@
         </tr>
      </tbody>
 		</table> 
+
+		<form class="form-horizontal">
+		  <h3><%= current_user.name %>, Leave a comment for this user:</h3>
+		  <div class="form-group">
+		  
+		    <label for="inputComment" class="col-sm-2 control-label">Comment</label>
+		    <div class="col-sm-10">
+		      <textarea class="form-control" rows="3" id="text-description" placeholder="Write here your comment"></textarea>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <div class="col-sm-offset-11 col-sm-12">
+		      <button type="submit" class="btn btn-primary">Comment</button>
+		    </div>
+		  </div>
+		</form>
 	</div>
 
 <% else %>
+
 	<div class="container" id="user-information">
 		<h2>Sorry dude! You should sign in to see this information</h2>
 		<%= link_to "Log in", new_user_session_path, class: "btn btn-primary btn-lg" %><br>

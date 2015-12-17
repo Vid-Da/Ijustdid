@@ -86,7 +86,7 @@ function createAllMarkers (achievement) {
 
   var achievement_text = '<div id="markerContent">'+
   '<div id="marker">'+
-  '<h2 id="marker-firstHeading" class="firstHeading"><a href="/api/achievements/' + achievement.id +'">' + achievement.title + '</a></h2>'+
+  '<h2 id="marker-firstHeading" class="firstHeading"><a href="/achievements/' + achievement.id +'">' + achievement.title + '</a></h2>'+
   '<div id="marker-bodyContent">'+
   '<h4>' + achievement.description + '</h4>'+
   '<p>More info:<a href="' + achievement.link + '">' + achievement.link + '</a></p>'+

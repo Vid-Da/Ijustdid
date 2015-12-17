@@ -67,13 +67,21 @@ body {
 	font-size: 20px;
 }
 
-#user-information{
-	height: 750px;
+#user-information, #achievement-information {
+
+	background-color: #f8f8f8;
+  border-color: #e7e7e7;
+  font-size: 16px;
+}
+
+.categories-menu{
+	background-color: #f8f8f8;
+  border-color: #e7e7e7;
 }
 
 footer {
 	margin-top: 20px;
 	text-align: center;
 	font-size: 17px;
-	background-color: #337ab7
+	background-color: #5bc0de
 }

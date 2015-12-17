@@ -5,12 +5,13 @@ Rails.application.routes.draw do
 
   get '/api/achievements' => 'achievements#index'
   post '/api/achievements' => 'achievements#create'
-  delete '/api/achievements/:id' => 'achievements#destroy'
+  delete '/api/achievements' => 'achievements#destroy'
   get "/api/achievements/new" => "achievements#create"
   get "/api/achievments/:id" => "achievements#show"
 
  resources :achievements, only: [ :show ]
  resources :users, only: [ :show ]
+
 =begin
 new_user_session GET    /users/sign_in(.:format)        devise/sessions#new
             user_session POST   /users/sign_in(.:format)        devise/sessions#create
@@ -35,7 +36,6 @@ cancel_user_registration GET    /users/cancel(.:format)         devise/registrat
                          GET    /api/achievments/:id(.:format)  achievements#show
              achievement GET    /achievements/:id(.:format)     achievements#show
                     user GET    /users/:id(.:format)            users#show
-
 =end
 
   # The priority is based upon order of creation: first created -> highest priority.

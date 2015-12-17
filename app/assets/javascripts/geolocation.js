@@ -23,7 +23,6 @@ function onError(error){
   console.log("What are you using, IE 7??" + error);
 }
 
-
 function createMap(Position){
   map = new google.maps.Map($('#map')[0], {
   	center: Position,

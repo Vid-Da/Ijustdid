@@ -22,11 +22,15 @@ class AchievementsController < ApplicationController
 
 	def show
 		@achievement = Achievement.find(params[:id])
+		@author_link = @achievement.user_id
+		@author = @achievement.user_name
 	end
 
 	def destroy
 		@achievement = Achievement.find(params[:id])
 		@achievement.destroy
+
+		redirect_to action: 'home#index'
 	end
 
 
