@@ -67,16 +67,31 @@ body {
 	font-size: 20px;
 }
 
-#user-information, #achievement-information {
-
+#achievement-information {
 	background-color: #f8f8f8;
   border-color: #e7e7e7;
   font-size: 16px;
 }
 
-.categories-menu{
+#user-information {
+	height: 730px;
 	background-color: #f8f8f8;
   border-color: #e7e7e7;
+  font-size: 16px;
+}
+
+#user-comments {
+	margin-top: 200px;
+}
+
+.categories-menu {
+	background-color: #f8f8f8;
+  border-color: #e7e7e7;
+}
+
+#show-users, #show-achievements {
+	background: url('http://www.compaccess.org/wp-content/uploads/colorful-triangles-background_ret_sml-900x500.jpg');
+	background-size: cover;
 }
 
 footer {
